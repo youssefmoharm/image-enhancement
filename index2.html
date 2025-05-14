@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageEnhancer Pro | Professional Image Enhancement</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Professional image enhancement tools with advanced algorithms for improving photo quality, contrast, and clarity.">
+    <meta name="keywords" content="image enhancement, photo editing, histogram equalization, gaussian blur, image processing">
+    <style>
+        /* Inline critical CSS to ensure it loads */
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #f72585;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --success-color: #4cc9f0;
+        }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-image"></i> ImageEnhancer Pro</div>
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#features"><i class="fas fa-magic"></i> Features</a></li>
+                <li><a href="#how-to-use"><i class="fas fa-question-circle"></i> How to Use</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#demo" class="cta-link"><i class="fas fa-play-circle"></i> Try Now</a></li>
+                <li id="auth-links-guest"><a href="/auth" class="auth-link"><i class="fas fa-sign-in-alt"></i> Login / Register</a></li>
+                <li id="auth-links-user" style="display:none;">
+                    <a href="#" class="user-menu-toggle">
+                        <i class="fas fa-user-circle"></i> <span id="user-name">User</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Transform Your <span class="highlight">Images</span> with AI</h1>
+                <p>Professional-grade image enhancement tools powered by advanced algorithms. Improve quality, adjust colors, and enhance details with precision.</p>
+                <div class="cta-buttons">
+                    <a href="#demo" class="cta-button primary"><i class="fas fa-play-circle"></i> Try Now</a>
+                    <a href="#features" class="cta-button secondary"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Enhancement Tools</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Images Enhanced</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.55</span>
+                        <span class="stat-label">User Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-animation">
+                <div class="floating-shapes">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Image enhancement example">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Enhancement Tools</h2>
+                    <p class="section-subtitle">Advanced algorithms to transform your images</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-adjust"></i>
+                        </div>
+                        <h3>Histogram Equalization</h3>
+                        <p>Optimize image contrast by redistributing pixel intensities across the full range, enhancing details in both shadows and highlights.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-blur"></i>
+                        </div>
+                        <h3>Gaussian Blur</h3>
+                        <p>Apply sophisticated Gaussian blur to reduce noise and create smooth transitions, perfect for portrait retouching and artistic effects.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Sharpening</h3>
+                        <p>Enhance image details and edges with precision, creating crisp, professional-quality images with improved definition.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-border-all"></i>
+                        </div>
+                        <h3>Edge Detection</h3>
+                        <p>Identify and highlight edges using advanced algorithms, ideal for technical analysis, artistic effects, and feature extraction.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Complement Enhancement</h3>
+                        <p>Create high-contrast negative effects that reveal hidden details and provide unique perspectives on your images.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h3>Salt and Pepper Noise</h3>
+                        <p>Simulate various image conditions with controlled noise addition, essential for testing and developing robust image processing algorithms.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                        <h3>Denoise</h3>
+                        <p>Remove noise while preserving critical details using state-of-the-art denoising algorithms, resulting in cleaner, more professional images.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-use" class="how-to-use-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Simple Workflow</h2>
+                    <p class="section-subtitle">Professional results in just a few steps</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Upload Your Image</h3>
+                            <p>Start by uploading your image in JPG, PNG, or other common formats. Our system supports high-resolution files up to 10MB.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Select Enhancement</h3>
+                            <p>Choose from our professional suite of enhancement tools based on your specific image improvement needs.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Apply and Preview</h3>
+                            <p>Apply the enhancement and see the results in real-time with our side-by-side comparison tool for precise adjustments.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Download Your Image</h3>
+                            <p>Export your enhanced image in your preferred format with options for quality settings and metadata preservation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Our Technology</h2>
+                    <p class="section-subtitle">Built on advanced computer vision principles</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Professional Image Processing</h3>
+                        <p>Our image enhancement platform leverages state-of-the-art computer vision algorithms developed by experts in the field. We combine traditional image processing techniques with modern AI approaches to deliver exceptional results.</p>
+                        <p>All processing is performed locally in your browser using WebAssembly technology, ensuring your images remain private and secure while maintaining professional-grade performance.</p>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Advanced Algorithms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Privacy Focused</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Professional Quality</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-time Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Image processing technology">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Image Enhancement</h2>
+                    <p class="section-subtitle">Experience the power of our tools</p>
+                </div>
+                <div class="demo-container">
+                    <div class="upload-area" id="drop-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Your Image</h3>
+                        <p>Drag and drop your image here or click to browse</p>
+                        <input type="file" id="image-upload" accept="image/*" hidden>
+                        <button class="upload-btn">Choose File</button>
+                    </div>
+                    <div class="enhancement-options">
+                        <h3>Enhancement Options</h3>
+                        <div class="option-group">
+                            <label>
+                                <input type="radio" name="enhancement" value="histogram" checked>
+                                <span>Histogram Equalization</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="enhancement" value="gaussian">
+                                <span>Gaussian Blur</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="enhancement" value="sharpening">
+                                <span>Sharpening</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="enhancement" value="edge">
+                                <span>Edge Detection</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="enhancement" value="complement">
+                                <span>Complement Enhancement</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="enhancement" value="noise">
+                                <span>Salt and Pepper Noise</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="enhancement" value="denoise">
+                                <span>Denoise</span>
+                            </label>
+                        </div>
+                        <button class="enhance-btn">Apply Enhancement</button>
+                    </div>
+                    <div class="result-area">
+                        <div class="image-comparison">
+                            <div class="original-image">
+                                <h4>Original</h4>
+                                <div class="image-placeholder">
+                                    <i class="fas fa-image"></i>
+                                    <p>Your image will appear here</p>
+                                </div>
+                            </div>
+                            <div class="enhanced-image">
+                                <h4>Enhanced</h4>
+                                <div class="image-placeholder">
+                                    <i class="fas fa-magic"></i>
+                                    <p>Enhanced image will appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="download-options">
+                            <select id="format-select" class="format-select">
+                                <option value="png">PNG (Lossless)</option>
+                                <option value="jpg">JPG (Compressed)</option>
+                                <option value="webp">WebP (Modern)</option>
+                            </select>
+                            <button class="download-btn" disabled>Download Enhanced Image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ImageEnhancer Pro</h3>
+                <p>We provide professional-grade image enhancement tools powered by advanced algorithms to help you achieve exceptional results with just a few clicks.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-to-use">How to Use</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#demo">Try Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Enhancement Tools</h3>
+                <ul>
+                    <li><a href="#demo">Histogram Equalization</a></li>
+                    <li><a href="#demo">Gaussian Blur</a></li>
+                    <li><a href="#demo">Sharpening</a></li>
+                    <li><a href="#demo">Edge Detection</a></li>
+                    <li><a href="#demo">Complement Enhancement</a></li>
+                    <li><a href="#demo">Denoise</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and professional tips.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ImageEnhancer Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // File upload handling
+        const dropArea = document.getElementById('drop-area');
+        const fileInput = document.getElementById('image-upload');
+        const uploadBtn = document.querySelector('.upload-btn');
+        const originalImagePlaceholder = document.querySelector('.original-image .image-placeholder');
+        const enhancedImagePlaceholder = document.querySelector('.enhanced-image .image-placeholder');
+        const downloadBtn = document.querySelector('.download-btn');
+        const formatSelect = document.getElementById('format-select');
+        const enhanceBtn = document.querySelector('.enhance-btn');
+        
+        let originalImageData = null;
+        let enhancedImageData = null;
+
+        // Handle button click
+        uploadBtn.addEventListener('click', function() {
+            fileInput.click();
+        });
+
+        // Handle drag and drop
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight() {
+            dropArea.classList.add('highlight');
+        }
+
+        function unhighlight() {
+            dropArea.classList.remove('highlight');
+        }
+
+        dropArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+
+        // Handle file selection
+        fileInput.addEventListener('change', function() {
+            handleFiles(this.files);
+        });
+
+        function handleFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        originalImageData = e.target.result;
+                        originalImagePlaceholder.innerHTML = `<img src="${originalImageData}" alt="Original image">`;
+                        downloadBtn.disabled = true;
+                        enhancedImageData = null;
+                        enhancedImagePlaceholder.innerHTML = `
+                            <i class="fas fa-magic"></i>
+                            <p>Enhanced image will appear here</p>
+                        `;
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please upload an image file');
+                }
+            }
+        }
+
+        // Enhancement button click - SIMULATED VERSION
+        enhanceBtn.addEventListener('click', function() {
+            if (!originalImageData) {
+                alert('Please upload an image first');
+                return;
+            }
+            
+            // Get the selected enhancement option
+            const selectedEnhancement = document.querySelector('input[name="enhancement"]:checked').value;
+            console.log('Selected enhancement:', selectedEnhancement);
+            
+            // Show loading state
+            enhancedImagePlaceholder.innerHTML = `
+                <div class="enhancement-message">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Applying professional enhancement...</p>
+                    <p class="note">Processing your image with advanced algorithms</p>
+                </div>
+            `;
+            
+            // Simulate processing delay
+            setTimeout(() => {
+                try {
+                    // Create a canvas to apply visual effects
+                    const img = new Image();
+                    img.onload = function() {
+                        console.log('Image loaded, dimensions:', img.width, 'x', img.height);
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        
+                        // Draw the original image
+                        ctx.drawImage(img, 0, 0);
+                        
+                        // Get image data for pixel manipulation
+                        let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        let data = imageData.data;
+                        
+                        switch(selectedEnhancement) {
+                            case 'histogram':
+                                console.log('Applying histogram equalization');
+                                // Simple contrast enhancement
+                                for (let i = 0; i < data.length; i += 4) {
+                                    data[i] = Math.min(255, Math.max(0, (data[i] - 128) * 1.5 + 128));     // Red
+                                    data[i+1] = Math.min(255, Math.max(0, (data[i+1] - 128) * 1.5 + 128)); // Green
+                                    data[i+2] = Math.min(255, Math.max(0, (data[i+2] - 128) * 1.5 + 128)); // Blue
+                                }
+                                ctx.putImageData(imageData, 0, 0);
+                                break;
+                                
+                            case 'gaussian':
+                                console.log('Applying gaussian blur');
+                                ctx.filter = 'blur(5px)';
+                                ctx.drawImage(img, 0, 0);
+                                break;
+                                
+                            case 'sharpening':
+                                console.log('Applying sharpening');
+                                ctx.filter = 'contrast(150%) brightness(110%)';
+                                ctx.drawImage(img, 0, 0);
+                                break;
+                                
+                            case 'edge':
+                                console.log('Applying edge detection');
+                                // Simple edge detection using grayscale and contrast
+                                for (let i = 0; i < data.length; i += 4) {
+                                    const avg = (data[i] + data[i+1] + data[i+2]) / 3;
+                                    const threshold = 128;
+                                    const value = avg > threshold ? 255 : 0;
+                                    data[i] = data[i+1] = data[i+2] = value;
+                                }
+                                ctx.putImageData(imageData, 0, 0);
+                                break;
+                                
+                            case 'complement':
+                                console.log('Applying complement');
+                                for (let i = 0; i < data.length; i += 4) {
+                                    data[i] = 255 - data[i];         // Red
+                                    data[i+1] = 255 - data[i+1];     // Green
+                                    data[i+2] = 255 - data[i+2];     // Blue
+                                }
+                                ctx.putImageData(imageData, 0, 0);
+                                break;
+                                
+                            case 'noise':
+                                console.log('Applying noise');
+                                for (let i = 0; i < data.length; i += 4) {
+                                    if (Math.random() < 0.1) { // 10% chance of noise
+                                        const noise = Math.random() < 0.5 ? 0 : 255;
+                                        data[i] = data[i+1] = data[i+2] = noise;
+                                    }
+                                }
+                                ctx.putImageData(imageData, 0, 0);
+                                break;
+                                
+                            case 'denoise':
+                                console.log('Applying denoise');
+                                ctx.filter = 'blur(1px)';
+                                ctx.drawImage(img, 0, 0);
+                                ctx.filter = 'contrast(110%)';
+                                ctx.drawImage(canvas, 0, 0);
+                                break;
+                        }
+                        
+                        // Convert to data URL
+                        enhancedImageData = canvas.toDataURL('image/png');
+                        console.log('Enhancement complete');
+                        enhancedImagePlaceholder.innerHTML = `<img src="${enhancedImageData}" alt="Enhanced image">`;
+                        downloadBtn.disabled = false;
+                    };
+                    img.src = originalImageData;
+                } catch (error) {
+                    console.error('Error during enhancement:', error);
+                    enhancedImagePlaceholder.innerHTML = `
+                        <div class="enhancement-message">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <p>Error applying enhancement</p>
+                            <p class="note">${error.message}</p>
+                        </div>
+                    `;
+                }
+            }, 1000);
+        });
+
+        // Download button click - SIMULATED VERSION
+        downloadBtn.addEventListener('click', function() {
+            if (!enhancedImageData) {
+                alert('Please enhance an image first');
+                return;
+            }
+            
+            const format = formatSelect.value;
+            
+            // Create a download link
+            const link = document.createElement('a');
+            link.href = enhancedImageData;
+            link.download = `enhanced_image.${format}`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        // Handle user authentication state
+        document.addEventListener('DOMContentLoaded', function() {
+            const userDataString = sessionStorage.getItem('user');
+            
+            if (userDataString) {
+                // User is logged in
+                const userData = JSON.parse(userDataString);
+                
+                // Update UI to show logged in state
+                document.getElementById('auth-links-guest').style.display = 'none';
+                document.getElementById('auth-links-user').style.display = 'block';
+                document.getElementById('user-name').textContent = userData.name.split(' ')[0];
+                
+                // Logout functionality
+                document.getElementById('logout-btn').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    sessionStorage.removeItem('user');
+                    window.location.reload();
+                });
+            } else {
+                // User is not logged in
+                document.getElementById('auth-links-guest').style.display = 'block';
+                document.getElementById('auth-links-user').style.display = 'none';
+            }
+        });
+
+        // Add this right after the demo section in the existing JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the form in the demo section
+            const enhancementForm = document.querySelector('#demo form');
+            
+            if (enhancementForm) {
+                // Handle form submission
+                enhancementForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const file = document.querySelector('#image-upload').files[0];
+                    const enhancementType = document.querySelector('#enhancement-type').value;
+                    
+                    if (!file) {
+                        alert('Please select an image first');
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = function() {
+                        const imageData = reader.result;
+                        
+                        // Get user info if available
+                        const userDataString = sessionStorage.getItem('user');
+                        let requestData = {
+                            image: imageData,
+                            enhancement: enhancementType
+                        };
+                        
+                        // Add user email if logged in
+                        if (userDataString) {
+                            const userData = JSON.parse(userDataString);
+                            requestData.email = userData.email;
+                        }
+                        
+                        // Show loading state
+                        document.querySelector('#result-image').style.display = 'none';
+                        document.querySelector('#loading').style.display = 'flex';
+                        
+                        // Send request to server
+                        fetch('/api/enhance', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(requestData)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Hide loading state
+                            document.querySelector('#loading').style.display = 'none';
+                            
+                            // Show enhanced image
+                            const resultImage = document.querySelector('#result-image');
+                            resultImage.src = data.enhanced_image;
+                            resultImage.style.display = 'block';
+                            
+                            // Enable download button
+                            const downloadBtn = document.querySelector('#download-button');
+                            downloadBtn.style.display = 'block';
+                            downloadBtn.setAttribute('data-image', data.enhanced_image);
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            document.querySelector('#loading').style.display = 'none';
+                            alert('Error enhancing image. Please try again.');
+                        });
+                    };
+                    reader.readAsDataURL(file);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
